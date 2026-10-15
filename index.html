@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simplesmente Ela - Lingeries</title>
+    <link rel="stylesheet"href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- HEADER/NAVEGAÇÃO -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <h1>Simplesmente Ela</h1>
+                    <p class="tagline">Conforto & Elegância</p>
+                </div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#colecoes">Coleções</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </nav>
+                <div class="header-icons">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                    <button class="cart-btn" id="cartBtn">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                    <button class="menu-toggle" id="menuToggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL -->
+    <section id="home" class="banner">
+        <div class="banner-content">
+            <h2>Sinta-se Confortável</h2>
+            <p>Lingeries de qualidade para você se sentir linda e elegante</p>
+            <button class="btn btn-primary">Comprar Agora</button>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CATEGORIAS -->
+    <section class="categories">
+        <div class="container">
+            <h2>Nossas Categorias</h2>
+            <div class="categories-grid">
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Sutiãs</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Calcinhas</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Camisolas</h3>
+                </div>
+                <div class="category-card">
+                    <div class="category-image">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Conjuntos</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE PRODUTOS DESTAQUE -->
+    <section id="produtos" class="products">
+        <div class="container">
+            <h2>Produtos em Destaque</h2>
+            <div class="products-grid" id="productsGrid">
+                <!-- Produtos serão inseridos via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE COLEÇÕES -->
+    <section id="colecoes" class="collections">
+        <div class="container">
+            <h2>Nossas Coleções</h2>
+            <div class="collections-grid">
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <span>Coleção Verão</span>
+                    </div>
+                    <p>Cores vibrantes e tecidos leves</p>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <span>Coleção Clássica</span>
+                    </div>
+                    <p>Elegância e sofisticação</p>
+                </div>
+                <div class="collection-card">
+                    <div class="collection-image">
+                        <span>Coleção Premium</span>
+                    </div>
+                    <p>Luxo e exclusividade</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL DO CARRINHO -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h2>Seu Carrinho</h2>
+                <button class="close-btn" id="closeCart">&times;</button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <p class="empty-cart">Seu carrinho está vazio</p>
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <strong>Total: R$ <span id="cartTotal">0.00</span></strong>
+                </div>
+                <button class="btn btn-primary">Finalizar Compra</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SEÇÃO DE CONTATO -->
+    <section id="contato" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Telefone</h3>
+                            <p>(11) 9999-9999</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>contato@simplesmenteela.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Localização</h3>
+                            <p>São Paulo, SP</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form">
+                    <input type="text" placeholder="Seu Nome" required>
+                    <input type="email" placeholder="Seu Email" required>
+                    <textarea placeholder="Sua Mensagem" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Simplesmente Ela</h3>
+                    <p>Lingeries de qualidade para toda mulher</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">Produtos</a></li>
+                        <li><a href="#">Promoções</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="#">Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Troca e Devolução</a></li>
+                        <li><a href="#">Frete</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Simplesmente Ela. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Produto -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="close-btn" id="closeModal">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image" id="modalImage"></div>
+                <div class="modal-info">
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDescription"></p>
+                    <div class="modal-price">
+                        <span class="price" id="modalPrice"></span>
+                    </div>
+                    <div class="size-selector">
+                        <label>Tamanho:</label>
+                        <div class="sizes" id="sizes">
+                            <button class="size-btn" data-size="P">P</button>
+                            <button class="size-btn" data-size="M">M</button>
+                            <button class="size-btn" data-size="G">G</button>
+                            <button class="size-btn" data-size="GG">GG</button>
+                        </div>
+                    </div>
+                    <div class="color-selector">
+                        <label>Cor:</label>
+                        <div class="colors" id="colors"></div>
+                    </div>
+                    <div class="quantity-selector">
+                        <label>Quantidade:</label>
+                        <div class="quantity-control">
+                            <button id="decreaseQty">-</button>
+                            <input type="number" id="quantity" value="1" min="1">
+                            <button id="increaseQty">+</button>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="addToCartBtn">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
